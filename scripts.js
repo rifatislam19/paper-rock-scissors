@@ -32,7 +32,6 @@ replay_button.addEventListener("click", function(){
 throw_choice_button.addEventListener("click", function(){
 var select_option = document.getElementById("select_button");
 var selected = select_option.options[select_option.selectedIndex].value;
-console.log(selected);
 var ai_throw = Math.floor(Math.random()*3)+1;
 
 if(selected=="blank"){
@@ -126,13 +125,11 @@ if(gameCount>0){
 });
 
 var player_name = localStorage.getItem('player_name');
-console.log(player_name);
 updateMessage("display_name", "Play the game,  " + player_name + "!");
 
 submit_name_button.addEventListener("click", function(){
   var input = document.getElementById("name").value;
   player_name = localStorage.setItem("player_name", input);
-  console.log(player_name);
   document.getElementById("enter_name").classList.remove("visible");
   document.getElementById("enter_name").classList.add("hidden");
   document.getElementById("throw_choice").classList.remove("hidden");
@@ -175,6 +172,5 @@ function makeToggable(button_element, div_element){
       div_element.classList.remove("visible");
       div_element.classList.add("hidden");
     }
-    console.log(div_element)
   });
 }

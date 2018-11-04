@@ -37,6 +37,8 @@ var ai_throw = Math.floor(Math.random()*3)+1;
 if(selected=="blank"){
   document.getElementById("give_feedback").style.color = "red";
   updateMessage("give_feedback", "You must choose either paper, rock, or scissors.");
+  document.getElementById("game_results").classList.remove("visible");
+  document.getElementById("game_results").classList.add("hidden");
 }
 if(selected!="blank"){
   document.getElementById("give_feedback").style.color = "green";

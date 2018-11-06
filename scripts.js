@@ -118,7 +118,7 @@ if(gameCount>0){
   updateMessage("games_played", "Games played: " + gameCount);
   updateMessage("total_wins", "Total wins: " + winCount);
   if(winCount>0||loseCount>0){
-    updateMessage("win_loss_ratio", "Win/Loss ratio: " + ((winCount)/(winCount+loseCount)*100).toFixed(0) + "% - " + ((loseCount)/(winCount+loseCount)*100).toFixed(0) +"%");
+    updateMessage("win_loss_ratio", "Win/Loss ratio: " + winCount + " - " + loseCount);
   }
   updateMessage("player_stats", "Player throws: rock - " + ((rockCount)/(gameCount)*100).toFixed(0) +"%, scissors - " + ((scissorsCount)/(gameCount)*100).toFixed(0) + "%, paper - " + ((paperCount)/(gameCount)*100).toFixed(0) + "%");
   updateMessage("browser_stats", "B(r)owser throws:  rock - " + ((rockCountAi)/(gameCount)*100).toFixed(0) +"%, scissors - " + ((scissorsCountAi)/(gameCount)*100).toFixed(0) + "%, paper - " + ((paperCountAi)/(gameCount)*100).toFixed(0) + "%");

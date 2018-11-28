@@ -21,7 +21,7 @@ if(!player){
   player = new Player();
 }
 if(!browser){
-  browser = new Browser();
+  browser = new Player();
 }
 
 replay_button.addEventListener("click", function(){

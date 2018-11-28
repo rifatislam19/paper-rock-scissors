@@ -1,3 +1,14 @@
+class Player {
+  cosntructor() {
+    this["games"] = 0;
+    this["wins"] = 0;
+    this["losses"] = 0;
+    this["paper"] = 0;
+    this["rock"] = 0;
+    this["scissors"] = 0;
+  }
+}
+
 var submit_name_button=document.getElementById("submit_name");
 var submit_name_div = document.getElementById("name");
 
@@ -7,10 +18,10 @@ var replay_button=document.getElementById("replay_button");
 var player = JSON.parse(localStorage.getItem("player"));
 var browser = JSON.parse(localStorage.getItem("browser"));
 if(!player){
-  var player = {"games":0, "wins":0, "losses":0, "paper":0, "rock":0, "scissors":0};
+  player = new Player();
 }
 if(!browser){
-  var browser = {"games":0, "wins":0, "losses":0, "paper":0, "rock":0, "scissors":0};
+  browser = new Browser();
 }
 
 replay_button.addEventListener("click", function(){
